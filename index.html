@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life RPG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        .retro-font {
+            font-family: 'Press Start 2P', cursive;
+        }
+        
+        /* Theme Scrollbars */
+        .theme-hardcore ::-webkit-scrollbar-thumb { background: #991b1b; }
+        .theme-hardcore ::-webkit-scrollbar-track { background: #450a0a; }
+        .theme-sick ::-webkit-scrollbar-thumb { background: #4d7c0f; }
+        .theme-sick ::-webkit-scrollbar-track { background: #1c1917; }
+        .theme-joker ::-webkit-scrollbar-thumb { background: #a855f7; }
+        .theme-joker ::-webkit-scrollbar-track { background: #2e1065; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1e293b; }
+        ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+        
+        .theme-transition { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        
+        @keyframes pulse-red {
+            0%, 100% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(239, 68, 68, 0.5); }
+        }
+        
+        @keyframes pulse-purple {
+            0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(168, 85, 247, 0.5); }
+        }
+        
+        .hardcore-glow { animation: pulse-red 2s infinite; }
+        .joker-glow { animation: pulse-purple 2s infinite; }
+
+        .sick-vignette {
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            box-shadow: inset 0 0 150px rgba(77, 124, 15, 0.15);
+            z-index: 9999;
+        }
+
+        .joker-vignette {
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            box-shadow: inset 0 0 150px rgba(168, 85, 247, 0.15);
+            z-index: 9998;
+        }
+
+        /* Shower Animation */
+        .rain-drop {
+          position: fixed;
+          background: rgba(255, 255, 255, 0.6);
+          width: 1px;
+          height: 80px;
+          top: -100px;
+          animation: fall linear infinite;
+          z-index: 10000;
+        }
+        @keyframes fall {
+          to { transform: translateY(120vh); }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Life RPG: The Ultimate Self-Improvement Game",
+  "description": "A high-performance gamification system that treats your real-life actions as quests. Level up, earn stats through PRs, fight bosses, and manage your seasonal progress in a hardcore RPG environment.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
